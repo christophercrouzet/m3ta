@@ -77,11 +77,11 @@ struct ArithmeticOperationResult<
 
 template<
     ArithmeticOperator T_operator,
-    typename T_Unique
+    typename T_Last
 >
-struct ArithmeticOperationResult<T_operator, T_Unique>
+struct ArithmeticOperationResult<T_operator, T_Last>
 {
-    using type = T_Unique;
+    using type = T_Last;
 };
 
 

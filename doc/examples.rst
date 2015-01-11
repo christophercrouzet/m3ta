@@ -341,8 +341,8 @@ only be iterated through a recursive approach.
        }
    };
    
-   template<typename T, std::size_t T_unique>
-   struct NestedInitializerListsProcessor<T, T_unique>
+   template<typename T, std::size_t T_last>
+   struct NestedInitializerListsProcessor<T, T_last>
    {
        using InitializerList = m3ta::NestedInitializerListsT<T, 1>;
        
@@ -350,7 +350,7 @@ only be iterated through a recursive approach.
        static void
        process(InitializerList list, T_Function function)
        {
-           if (list.size() > T_unique) {
+           if (list.size() > T_last) {
                throw std::invalid_argument(
                    "Elements in excess within the initilizer list."
                );
@@ -358,8 +358,8 @@ only be iterated through a recursive approach.
            
            std::for_each(list.begin(), list.end(), function);
            
-           if (T_unique != list.size()) {
-               std::size_t count = T_unique - list.size();
+           if (T_last != list.size()) {
+               std::size_t count = T_last - list.size();
                for (; count > 0; --count) {
                    function(static_cast<T>(0));
                }
