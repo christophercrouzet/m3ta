@@ -20,13 +20,13 @@ Traits
    
    .. code-block:: cpp
       
-      template<typename T_Sequence, std::size_t T_count = 1>
+      template<std::size_t T_count, typename T_Sequence>
       struct PopIntegerSequence;
    
    
    :Template Parameters:
+      - **T_count** – Number of elements to remove from the end.
       - **T_Sequence** – Type of the sequence.
-      - **T_count** (optional) – Number of elements to remove from the end.
    
    
    .. rubric:: Member Types
@@ -46,9 +46,9 @@ Aliases
    
    .. code-block:: cpp
       
-      template<typename T_Sequence, std::size_t T_count = 1>
+      template<std::size_t T_count, typename T_Sequence>
       using PopIntegerSequenceT =
-          typename PopIntegerSequence<T_Sequence, T_count>::type;
+          typename PopIntegerSequence<T_count, T_Sequence>::type;
 
 
 Usage Examples
@@ -59,9 +59,10 @@ Usage Examples
 .. code-block:: cpp
    
    using Type1 = m3ta::PopIntegerSequenceT<
+       1,
        m3ta::IntegerSequence<int, 0, 1, 2, 4>
    >; // m3ta::IntegerSequence<T, 0, 1, 2>
    using Type2 = m3ta::PopIntegerSequenceT<
-       m3ta::IntegerSequence<int, 0, 1, 2, 4>,
-       2
+       2,
+       m3ta::IntegerSequence<int, 0, 1, 2, 4>
    >; // m3ta::IntegerSequence<T, 0, 1>
