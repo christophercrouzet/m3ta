@@ -26,7 +26,7 @@ Traits
    
    :Template Parameters:
       - **T_count** – Number of elements to remove from the end.
-      - **T_Sequence** – Type of the sequence.
+      - **T_Sequence** – The integer sequence.
    
    
    .. rubric:: Member Types
@@ -40,9 +40,9 @@ Traits
 Aliases
 -------
 
-.. _alias_popintegersequencest:
+.. _alias_popintegersequencet:
 
-.. describe:: m3ta::ConcatenateIntegerSequencesT
+.. describe:: m3ta::PopIntegerSequenceT
    
    .. code-block:: cpp
       
@@ -54,15 +54,15 @@ Aliases
 Usage Examples
 --------------
 
-.. _usageexamples_popintegersequences:
+.. _usageexamples_popintegersequence:
 
 .. code-block:: cpp
    
    using Type1 = m3ta::PopIntegerSequenceT<
        1,
        m3ta::IntegerSequence<int, 0, 1, 2, 4>
-   >; // m3ta::IntegerSequence<T, 0, 1, 2>
+   >; // m3ta::IntegerSequence<int, 0, 1, 2>
    using Type2 = m3ta::PopIntegerSequenceT<
        2,
        m3ta::IntegerSequence<int, 0, 1, 2, 4>
-   >; // m3ta::IntegerSequence<T, 0, 1>
+   >; // m3ta::IntegerSequence<int, 0, 1>

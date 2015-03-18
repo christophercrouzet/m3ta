@@ -10,7 +10,7 @@ Integer Sequence
 
 Sequence of integers.
 
-This is the equivalent of C++14‘s ``std::integer_sequence``.
+This is the equivalent of C++14’s ``std::integer_sequence``.
 
 
 Traits

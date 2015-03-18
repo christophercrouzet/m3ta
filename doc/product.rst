@@ -33,9 +33,9 @@ Functions
       product(T_First first, T_Others ... others) noexcept
     
     
-    The arguments passed do not have to be of numeric type—custom types such as
-    matrices and vectors can be passed as soon as they define arithmetic
-    multiplications with the values preceding and/or following them.
+   The arguments passed do not have to be of numeric type—custom types such as
+   matrices and vectors can be passed as soon as they define arithmetic
+   multiplications with the values preceding and/or following them.
    
    
    :Template Parameters:

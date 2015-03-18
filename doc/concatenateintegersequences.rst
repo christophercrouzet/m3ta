@@ -25,8 +25,8 @@ Traits
    
    
    :Template Parameters:
-      - **T_Sequence1** – Type of the first sequence.
-      - **T_Sequence2** – Type of the second sequence.
+      - **T_Sequence1** – The first integer sequence.
+      - **T_Sequence2** – The second integer sequence.
    
    
    .. rubric:: Member Types
