@@ -43,6 +43,10 @@ Traits
    .. describe:: std::size_t size() noexcept
       
       Number of values.
+   
+   .. describe:: std::array<T, size()> asArray()
+      
+      The integer sequence as a ``std::array``.
 
 
 Aliases
