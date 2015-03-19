@@ -39,6 +39,12 @@ create_test(
 )
 
 create_test(
+    test-m3ta-extractintegersequence
+    NAME m3ta-extractintegersequence
+    FILE m3ta/extractintegersequence.cpp
+)
+
+create_test(
     test-m3ta-integersequence
     NAME m3ta-integersequence
     FILE m3ta/integersequence.cpp

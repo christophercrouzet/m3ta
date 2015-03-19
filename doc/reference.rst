@@ -44,6 +44,7 @@ available as a convenience.
    
    arithmeticoperationresult
    concatenateintegersequences
+   extractintegersequence
    nestedinitializerlists
    pass
    popintegersequence
