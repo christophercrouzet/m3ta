@@ -1,5 +1,6 @@
 #include <type_traits>
 
+#include <m3ta/integersequence>
 #include <m3ta/popintegersequence>
 
 #include "../assert.h"
