@@ -15,8 +15,8 @@ namespace _popintegersequence
 
 template<
     std::size_t T_position,
-    typename T_DestinationIntegerSequence,
-    typename T_SourceIntegerSequence
+    typename T_DestinationSequence,
+    typename T_SourceSequence
 >
 struct Base;
 
