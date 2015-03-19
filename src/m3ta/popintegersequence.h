@@ -69,6 +69,28 @@ template<std::size_t T_count, typename T_Sequence>
 using PopIntegerSequenceT =
     typename PopIntegerSequence<T_count, T_Sequence>::type;
 
+template<std::size_t T_count, typename T, T ... T_values>
+using PopIntegerPack =
+    PopIntegerSequence<
+        T_count,
+        IntegerSequence<T, T_values...>
+    >;
+
+template<std::size_t T_count, typename T, T ... T_values>
+using PopIntegerPackT =
+    typename PopIntegerPack<T_count, T, T_values ...>::type;
+
+template<std::size_t T_count, std::size_t ... T_values>
+using PopIndexPack =
+    PopIntegerSequence<
+        T_count,
+        IndexSequence<T_values...>
+    >;
+
+template<std::size_t T_count, std::size_t ... T_values>
+using PopIndexPackT =
+    typename PopIndexPack<T_count, T_values ...>::type;
+
 } // namespace m3ta.
 
 #endif // M3TA_POPINTEGERSEQUENCE_H
