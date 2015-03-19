@@ -121,3 +121,9 @@ create_test(
     NAME m3ta-removequalifiers
     FILE m3ta/removequalifiers.cpp
 )
+
+create_test(
+    test-m3ta-reverseintegersequence
+    NAME m3ta-reverseintegersequence
+    FILE m3ta/reverseintegersequence.cpp
+)

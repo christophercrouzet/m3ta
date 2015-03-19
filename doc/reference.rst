@@ -49,6 +49,7 @@ available as a convenience.
    popintegersequence
    readonlyparameter
    removequalifiers
+   reverseintegersequence
 
 
 Specials
