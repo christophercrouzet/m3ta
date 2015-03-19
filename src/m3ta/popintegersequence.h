@@ -13,49 +13,25 @@ namespace m3ta
 namespace _popintegersequence
 {
 
-template<
-    std::size_t T_position,
-    typename T_DestinationSequence,
-    typename T_SourceSequence
->
+template<std::size_t T_position, typename T_Sequence>
 struct Base;
 
-template<
-    std::size_t T_position,
-    typename T,
-    T ... T_destination,
-    T T_firstSource,
-    T ... T_otherSources
->
-struct Base<
-    T_position,
-    IntegerSequence<T, T_destination ...>,
-    IntegerSequence<T, T_firstSource, T_otherSources ...>
->
+template<std::size_t T_position, typename T, T T_first, T ... T_others>
+struct Base<T_position, IntegerSequence<T, T_first, T_others ...>>
 {
     using type = ConcatenateIntegerSequencesT<
-        IntegerSequence<T, T_destination ..., T_firstSource>,
+        IntegerSequence<T, T_first>,
         typename Base<
             T_position - 1,
-            IntegerSequence<T, T_destination ...>,
-            IntegerSequence<T, T_otherSources ...>
+            IntegerSequence<T, T_others ...>
         >::type
     >;
 };
 
-template<
-    typename T,
-    T ... T_destination,
-    T T_firstSource,
-    T ... T_otherSources
->
-struct Base<
-    0,
-    IntegerSequence<T, T_destination ...>,
-    IntegerSequence<T, T_firstSource, T_otherSources ...>
->
+template<typename T, T T_first, T ... T_others>
+struct Base<0, IntegerSequence<T, T_first, T_others ...>>
 {
-    using type = IntegerSequence<T, T_destination ...>;
+    using type = IntegerSequence<T>;
 };
 
 } // namespace _popintegersequence.
@@ -70,7 +46,6 @@ template<std::size_t T_count, typename T, T ... T_values>
 struct PopIntegerSequence<T_count, IntegerSequence<T, T_values ...>>
     : public _popintegersequence::Base<
           sizeof ... (T_values) - minimum(T_count, sizeof ... (T_values)),
-          IntegerSequence<T>,
           IntegerSequence<T, T_values ...>
       >
 {};
