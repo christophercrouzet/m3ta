@@ -16,7 +16,7 @@ std::string
 errorMessageForType()
 {
     std::ostringstream message;
-    message << "Error for template<" << TypeName<T>::value << ">.";
+    message << "Error for type '" << TypeName<T>::value << "'.";
     return message.str();
 }
 
@@ -25,8 +25,8 @@ std::string
 errorMessageForOperator()
 {
     std::ostringstream message;
-    message << "Error for operator "
-            << UnaryOperator<T_operator>::value << ".";
+    message << "Error for operator '"
+            << UnaryOperator<T_operator>::value << "'.";
     
     return message.str();
 }
@@ -36,8 +36,8 @@ std::string
 errorMessageForOperator()
 {
     std::ostringstream message;
-    message << "Error for operator "
-            << BinaryOperator<T_operator>::value << ".";
+    message << "Error for operator '"
+            << BinaryOperator<T_operator>::value << "'.";
     
     return message.str();
 }
