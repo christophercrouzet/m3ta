@@ -2,6 +2,7 @@
 #define TESTS_TYPENAME_H
 
 #include <complex>
+#include <string>
 
 
 namespace tests
@@ -9,75 +10,129 @@ namespace tests
 
 template<typename T>
 struct TypeName
-{ static constexpr const char *value = "unknown"; };
+{
+    static std::string value()
+    { return "unknown"; }
+};
 
 template<>
 struct TypeName<bool>
-{ static constexpr const char *value = "bool"; };
+{
+    static std::string value()
+    { return "bool"; }
+};
 
 template<>
 struct TypeName<char>
-{ static constexpr const char *value = "char"; };
+{
+    static std::string value()
+    { return "char"; }
+};
 
 template<>
 struct TypeName<short>
-{ static constexpr const char *value = "short"; };
+{
+    static std::string value()
+    { return "short"; }
+};
 
 template<>
 struct TypeName<int>
-{ static constexpr const char *value = "int"; };
+{
+    static std::string value()
+    { return "int"; }
+};
 
 template<>
 struct TypeName<long>
-{ static constexpr const char *value = "long"; };
+{
+    static std::string value()
+    { return "long"; }
+};
 
 template<>
 struct TypeName<long long>
-{ static constexpr const char *value = "long long"; };
+{
+    static std::string value()
+    { return "long long"; }
+};
 
 template<>
 struct TypeName<unsigned char>
-{ static constexpr const char *value = "unsigned char"; };
+{
+    static std::string value()
+    { return "unsigned char"; }
+};
 
 template<>
 struct TypeName<unsigned short>
-{ static constexpr const char *value = "unsigned short"; };
+{
+    static std::string value()
+    { return "unsigned short"; }
+};
 
 template<>
 struct TypeName<unsigned int>
-{ static constexpr const char *value = "unsigned int"; };
+{
+    static std::string value()
+    { return "unsigned int"; }
+};
 
 template<>
 struct TypeName<unsigned long>
-{ static constexpr const char *value = "unsigned long"; };
+{
+    static std::string value()
+    { return "unsigned long"; }
+};
 
 template<>
 struct TypeName<unsigned long long>
-{ static constexpr const char *value = "unsigned long long"; };
+{
+    static std::string value()
+    { return "unsigned long long"; }
+};
 
 template<>
 struct TypeName<float>
-{ static constexpr const char *value = "float"; };
+{
+    static std::string value()
+    { return "float"; }
+};
 
 template<>
 struct TypeName<double>
-{ static constexpr const char *value = "double"; };
+{
+    static std::string value()
+    { return "double"; }
+};
 
 template<>
 struct TypeName<long double>
-{ static constexpr const char *value = "long double"; };
+{
+    static std::string value()
+    { return "long double"; }
+};
 
 template<>
 struct TypeName<std::complex<float>>
-{ static constexpr const char *value = "std::complex<float>"; };
+{
+    static std::string value()
+    { return "std::complex<float>"; }
+};
 
 template<>
 struct TypeName<std::complex<double>>
-{ static constexpr const char *value = "std::complex<double>"; };
+{
+    static std::string value()
+    { return "std::complex<double>"; }
+};
 
 template<>
 struct TypeName<std::complex<long double>>
-{ static constexpr const char *value = "std::complex<long double>"; };
+{
+    static std::string value()
+    { return "std::complex<long double>"; }
+};
 
 } // namespace tests.
 

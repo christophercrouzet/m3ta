@@ -20,11 +20,17 @@ namespace tests
 
 template<>
 struct TypeName<Small>
-{ static constexpr const char *value = "Small"; };
+{
+    static std::string value()
+    { return "Small"; }
+};
 
 template<>
 struct TypeName<Big>
-{ static constexpr const char *value = "Big"; };
+{
+    static std::string value()
+    { return "Big"; }
+};
 
 } // namespace tests.
 
