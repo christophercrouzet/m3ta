@@ -50,15 +50,36 @@ Aliases
       using PopIntegerSequenceT =
           typename PopIntegerSequence<T_count, T_Sequence>::type;
       
+
+.. _alias_popintegerpack:
+
+.. describe:: m3ta::PopIntegerPack
+   
+   .. code-block:: cpp
+      
       template<std::size_t T_count, typename T, T ... T_values>
       using PopIntegerPack = PopIntegerSequence<
           T_count,
           IntegerSequence<T, T_values...>
       >;
       
+      
+.. _alias_popintegerpackt:
+
+.. describe:: m3ta::PopIntegerPackT
+   
+   .. code-block:: cpp
+      
       template<std::size_t T_count, typename T, T ... T_values>
       using PopIntegerPackT =
           typename PopIntegerPack<T_count, T, T_values ...>::type;
+      
+      
+.. _alias_popindexpack:
+
+.. describe:: m3ta::PopIndexPack
+   
+   .. code-block:: cpp
       
       template<std::size_t T_count, std::size_t ... T_values>
       using PopIndexPack =
@@ -66,6 +87,12 @@ Aliases
               T_count,
               IndexSequence<T_values...>
           >;
+      
+.. _alias_popindexpackt:
+
+.. describe:: m3ta::PopIndexPackT
+   
+   .. code-block:: cpp
       
       template<std::size_t T_count, std::size_t ... T_values>
       using PopIndexPackT =

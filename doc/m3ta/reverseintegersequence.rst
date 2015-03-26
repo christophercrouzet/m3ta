@@ -49,17 +49,45 @@ Aliases
       using ReverseIntegerSequenceT =
           typename ReverseIntegerSequence<T_Sequence>::type;
       
+      
+.. _alias_reverseintegerpack:
+
+.. describe:: m3ta::ReverseIntegerPack
+   
+   .. code-block:: cpp
+      
       template<typename T, T ... T_values>
       using ReverseIntegerPack =
           ReverseIntegerSequence<IntegerSequence<T, T_values...>>;
+      
+      
+.. _alias_reverseintegerpackt:
+
+.. describe:: m3ta::ReverseIntegerPackT
+   
+   .. code-block:: cpp
       
       template<typename T, T ... T_values>
       using ReverseIntegerPackT =
           typename ReverseIntegerPack<T, T_values...>::type;
       
+      
+.. _alias_reverseindexpack:
+
+.. describe:: m3ta::ReverseIndexPack
+   
+   .. code-block:: cpp
+      
       template<std::size_t ... T_values>
       using ReverseIndexPack =
           ReverseIntegerSequence<IndexSequence<T_values...>>;
+      
+      
+.. _alias_reverseindexpackt:
+
+.. describe:: m3ta::ReverseIndexPackT
+   
+   .. code-block:: cpp
       
       template<std::size_t ... T_values>
       using ReverseIndexPackT =
