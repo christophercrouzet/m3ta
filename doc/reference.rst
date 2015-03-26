@@ -19,16 +19,16 @@ inheriting from ``std::integral_constant``.
 .. toctree::
    :maxdepth: 1
    
-   all
-   any
-   endingoccurrences
-   iscomplex
-   isoperatorcallable
-   maximum
-   minimum
-   none
-   power
-   product
+   m3ta/all
+   m3ta/any
+   m3ta/endingoccurrences
+   m3ta/iscomplex
+   m3ta/isoperatorcallable
+   m3ta/maximum
+   m3ta/minimum
+   m3ta/none
+   m3ta/power
+   m3ta/product
 
 
 Types
@@ -42,15 +42,15 @@ available as a convenience.
 .. toctree::
    :maxdepth: 1
    
-   arithmeticoperationresult
-   concatenateintegersequences
-   extractintegersequence
-   nestedinitializerlists
-   pass
-   popintegersequence
-   readonlyparameter
-   removequalifiers
-   reverseintegersequence
+   m3ta/arithmeticoperationresult
+   m3ta/concatenateintegersequences
+   m3ta/extractintegersequence
+   m3ta/nestedinitializerlists
+   m3ta/pass
+   m3ta/popintegersequence
+   m3ta/readonlyparameter
+   m3ta/removequalifiers
+   m3ta/reverseintegersequence
 
 
 Specials
@@ -61,6 +61,6 @@ For the uncategorizable ones.
 .. toctree::
    :maxdepth: 1
    
-   dependentbool
-   integersequence
-   parameterpack
+   m3ta/dependentbool
+   m3ta/integersequence
+   m3ta/parameterpack
