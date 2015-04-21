@@ -131,7 +131,7 @@ void functionVector3()
 }
 
 template<typename T>
-void typeIntegral()
+void type()
 {
     TEST_ASSERT((std::is_same<m3ta::ProductT<T, 0>, std::integral_constant<T, 0>>::value), tests::errorMessageForType<T>());
     
@@ -191,14 +191,14 @@ int main(int argc, char **argv)
     functionVector3<double>();
     functionVector3<long double>();
     
-    typeIntegral<char>();
-    typeIntegral<unsigned char>();
-    typeIntegral<short>();
-    typeIntegral<unsigned short>();
-    typeIntegral<int>();
-    typeIntegral<unsigned int>();
-    typeIntegral<long>();
-    typeIntegral<unsigned long>();
+    type<char>();
+    type<unsigned char>();
+    type<short>();
+    type<unsigned short>();
+    type<int>();
+    type<unsigned int>();
+    type<long>();
+    type<unsigned long>();
     
     associativity();
     overflow();

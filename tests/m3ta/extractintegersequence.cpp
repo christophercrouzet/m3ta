@@ -13,7 +13,7 @@
 // -----------------------------------------------------------------------------
 
 template<typename T>
-void asArrayIntegral()
+void asArray()
 {
     TEST_ASSERT((m3ta::ExtractIntegerSequence<m3ta::IntegerSequence<T>>::asArray() == std::array<T, 0>{}), tests::errorMessageForType<T>());
     TEST_ASSERT((m3ta::ExtractIntegerSequence<m3ta::IntegerSequence<T, 0>>::asArray() == std::array<T, 1>{0}), tests::errorMessageForType<T>());
@@ -38,14 +38,14 @@ void asArrayIntegral()
 
 int main(int argc, char **argv)
 {
-    asArrayIntegral<char>();
-    asArrayIntegral<unsigned char>();
-    asArrayIntegral<short>();
-    asArrayIntegral<unsigned short>();
-    asArrayIntegral<int>();
-    asArrayIntegral<unsigned int>();
-    asArrayIntegral<long>();
-    asArrayIntegral<unsigned long>();
+    asArray<char>();
+    asArray<unsigned char>();
+    asArray<short>();
+    asArray<unsigned short>();
+    asArray<int>();
+    asArray<unsigned int>();
+    asArray<long>();
+    asArray<unsigned long>();
     
     return 0;
 }

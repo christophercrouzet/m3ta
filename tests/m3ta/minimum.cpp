@@ -12,7 +12,7 @@
 // -----------------------------------------------------------------------------
 
 template<typename T>
-void functionNumeric()
+void function()
 {
     TEST_ASSERT(m3ta::minimum(static_cast<T>(0), static_cast<T>(0)) == 0, tests::errorMessageForType<T>());
     TEST_ASSERT(m3ta::minimum(static_cast<T>(1), static_cast<T>(1)) == 1, tests::errorMessageForType<T>());
@@ -36,7 +36,7 @@ void functionNumeric()
 }
 
 template<typename T>
-void typeIntegral()
+void type()
 {
     TEST_ASSERT((std::is_same<m3ta::MinimumT<T, 0, 0>, std::integral_constant<T, 0>>::value), tests::errorMessageForType<T>());
     TEST_ASSERT((std::is_same<m3ta::MinimumT<T, 1, 1>, std::integral_constant<T, 1>>::value), tests::errorMessageForType<T>());
@@ -68,26 +68,26 @@ void typeIntegral()
 
 int main(int argc, char **argv)
 {
-    functionNumeric<char>();
-    functionNumeric<unsigned char>();
-    functionNumeric<short>();
-    functionNumeric<unsigned short>();
-    functionNumeric<int>();
-    functionNumeric<unsigned int>();
-    functionNumeric<long>();
-    functionNumeric<unsigned long>();
-    functionNumeric<float>();
-    functionNumeric<double>();
-    functionNumeric<long double>();
+    function<char>();
+    function<unsigned char>();
+    function<short>();
+    function<unsigned short>();
+    function<int>();
+    function<unsigned int>();
+    function<long>();
+    function<unsigned long>();
+    function<float>();
+    function<double>();
+    function<long double>();
     
-    typeIntegral<char>();
-    typeIntegral<unsigned char>();
-    typeIntegral<short>();
-    typeIntegral<unsigned short>();
-    typeIntegral<int>();
-    typeIntegral<unsigned int>();
-    typeIntegral<long>();
-    typeIntegral<unsigned long>();
+    type<char>();
+    type<unsigned char>();
+    type<short>();
+    type<unsigned short>();
+    type<int>();
+    type<unsigned int>();
+    type<long>();
+    type<unsigned long>();
     
     return 0;
 }

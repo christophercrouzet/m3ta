@@ -12,13 +12,13 @@
 // -----------------------------------------------------------------------------
 
 template<typename T>
-void valueTypeIntegral()
+void valueType()
 {
     TEST_ASSERT((std::is_same<typename m3ta::IntegerSequence<T>::value_type, T>::value), tests::errorMessageForType<T>());
 }
 
 template<typename T>
-void sizeIntegral()
+void size()
 {
     TEST_ASSERT((m3ta::IntegerSequence<T>::size() == 0), tests::errorMessageForType<T>());
     TEST_ASSERT((m3ta::IntegerSequence<T, 0>::size() == 1), tests::errorMessageForType<T>());
@@ -43,23 +43,23 @@ void sizeIntegral()
 
 int main(int argc, char **argv)
 {
-    valueTypeIntegral<char>();
-    valueTypeIntegral<unsigned char>();
-    valueTypeIntegral<short>();
-    valueTypeIntegral<unsigned short>();
-    valueTypeIntegral<int>();
-    valueTypeIntegral<unsigned int>();
-    valueTypeIntegral<long>();
-    valueTypeIntegral<unsigned long>();
+    valueType<char>();
+    valueType<unsigned char>();
+    valueType<short>();
+    valueType<unsigned short>();
+    valueType<int>();
+    valueType<unsigned int>();
+    valueType<long>();
+    valueType<unsigned long>();
     
-    sizeIntegral<char>();
-    sizeIntegral<unsigned char>();
-    sizeIntegral<short>();
-    sizeIntegral<unsigned short>();
-    sizeIntegral<int>();
-    sizeIntegral<unsigned int>();
-    sizeIntegral<long>();
-    sizeIntegral<unsigned long>();
+    size<char>();
+    size<unsigned char>();
+    size<short>();
+    size<unsigned short>();
+    size<int>();
+    size<unsigned int>();
+    size<long>();
+    size<unsigned long>();
     
     return 0;
 }

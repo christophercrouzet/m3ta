@@ -13,7 +13,7 @@
 // -----------------------------------------------------------------------------
 
 template<typename T>
-void typeIntegral()
+void type()
 {
     TEST_ASSERT((std::is_same<m3ta::ReverseIntegerSequenceT<m3ta::IntegerSequence<T>>, m3ta::IntegerSequence<T>>::value), tests::errorMessageForType<T>());
     
@@ -40,13 +40,13 @@ void typeIntegral()
 
 int main(int argc, char **argv)
 {
-    typeIntegral<char>();
-    typeIntegral<unsigned char>();
-    typeIntegral<short>();
-    typeIntegral<unsigned short>();
-    typeIntegral<int>();
-    typeIntegral<unsigned int>();
-    typeIntegral<long>();
-    typeIntegral<unsigned long>();
+    type<char>();
+    type<unsigned char>();
+    type<short>();
+    type<unsigned short>();
+    type<int>();
+    type<unsigned int>();
+    type<long>();
+    type<unsigned long>();
     return 0;
 }
