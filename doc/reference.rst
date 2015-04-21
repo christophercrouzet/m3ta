@@ -43,7 +43,7 @@ available as a convenience.
    :maxdepth: 1
    
    m3ta/arithmeticoperationresult
-   m3ta/concatenateintegersequences
+   m3ta/concatenate
    m3ta/extractintegersequence
    m3ta/nestedinitializerlists
    m3ta/pass

@@ -1,7 +1,7 @@
 #ifndef M3TA_REVERSEINTEGERSEQUENCE_H
 #define M3TA_REVERSEINTEGERSEQUENCE_H
 
-#include "concatenateintegersequences.h"
+#include "concatenate.h"
 #include "integersequence.h"
 
 
@@ -16,7 +16,7 @@ struct ReverseIntegerSequence;
 template<typename T, T T_first, T ... T_others>
 struct ReverseIntegerSequence<IntegerSequence<T, T_first, T_others ...>>
 {
-    using type = ConcatenateIntegerSequencesT<
+    using type = ConcatenateT<
         typename ReverseIntegerSequence<IntegerSequence<T, T_others ...>>::type,
         IntegerSequence<T, T_first>
     >;

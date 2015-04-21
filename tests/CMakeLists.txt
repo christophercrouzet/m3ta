@@ -21,9 +21,9 @@ create_test(
 )
 
 create_test(
-    test-m3ta-concatenateintegersequences
-    NAME m3ta-concatenateintegersequences
-    FILE m3ta/concatenateintegersequences.cpp
+    test-m3ta-concatenate
+    NAME m3ta-concatenate
+    FILE m3ta/concatenate.cpp
 )
 
 create_test(

@@ -3,7 +3,7 @@
 
 #include <cstddef>
 
-#include "concatenateintegersequences.h"
+#include "concatenate.h"
 #include "integersequence.h"
 #include "minimum.h"
 
@@ -19,7 +19,7 @@ struct Base;
 template<std::size_t T_position, typename T, T T_first, T ... T_others>
 struct Base<T_position, IntegerSequence<T, T_first, T_others ...>>
 {
-    using type = ConcatenateIntegerSequencesT<
+    using type = ConcatenateT<
         IntegerSequence<T, T_first>,
         typename Base<
             T_position - 1,
