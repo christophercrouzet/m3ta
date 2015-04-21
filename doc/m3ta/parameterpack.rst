@@ -26,3 +26,10 @@ Traits
    
    :Template Parameters:
       - **T** – Types to pack.
+   
+   
+   .. rubric:: Member Functions
+   
+   .. describe:: std::size_t size() noexcept
+      
+      Number of parameters.
