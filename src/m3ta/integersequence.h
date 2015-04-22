@@ -1,6 +1,7 @@
 #ifndef M3TA_INTEGERSEQUENCE_H
 #define M3TA_INTEGERSEQUENCE_H
 
+#include <array>
 #include <cstddef>
 #include <type_traits>
 
@@ -21,6 +22,12 @@ struct IntegerSequence
     size() noexcept
     {
         return sizeof ... (T_values);
+    }
+    
+    static constexpr std::array<T, sizeof ... (T_values)>
+    asArray()
+    {
+        return {T_values ...};
     }
 };
 

@@ -44,7 +44,6 @@ available as a convenience.
    
    m3ta/arithmeticoperationresult
    m3ta/concatenate
-   m3ta/extractintegersequence
    m3ta/nestedinitializerlists
    m3ta/pass
    m3ta/popback
