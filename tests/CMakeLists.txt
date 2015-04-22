@@ -99,9 +99,9 @@ create_test(
 )
 
 create_test(
-    test-m3ta-popintegersequence
-    NAME m3ta-popintegersequence
-    FILE m3ta/popintegersequence.cpp
+    test-m3ta-popback
+    NAME m3ta-popback
+    FILE m3ta/popback.cpp
 )
 
 create_test(
