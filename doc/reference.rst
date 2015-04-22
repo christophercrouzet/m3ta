@@ -50,7 +50,7 @@ available as a convenience.
    m3ta/popintegersequence
    m3ta/readonlyparameter
    m3ta/removequalifiers
-   m3ta/reverseintegersequence
+   m3ta/reverse
 
 
 Specials

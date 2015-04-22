@@ -1,53 +1,55 @@
-.. _reference_reverseintegersequence:
+.. _reference_reverse:
 
-Reverse Integer Sequence
-========================
+Reverse
+=======
 
 .. code-block:: cpp
    
-   #include <m3ta/reverseintegersequence>
+   #include <m3ta/reverse>
 
 
-Reverses an integer sequence.
+Reverses a sequence. Works for both
+:ref:`m3ta::IntegerSequence <trait_integersequence>` and
+:ref:`m3ta::ParameterPack <trait_parameterpack>`.
 
 
 Traits
 ------
 
-.. _trait_reverseintegersequence:
+.. _trait_reverse:
 
-.. describe:: m3ta::ReverseIntegerSequence
+.. describe:: m3ta::Reverse
    
    .. code-block:: cpp
       
       template<typename T_Sequence>
-      struct ReverseIntegerSequence;
+      struct Reverse;
    
    
    :Template Parameters:
-      - **T_Sequence** – Integer sequence.
+      - **T_Sequence** – Sequence.
    
    
    .. rubric:: Member Types
    
    .. describe:: type
       
-      The type :ref:`m3ta::IntegerSequence <trait_integersequence>`
-      resulting of the reversal.
+      Either the type :ref:`m3ta::IntegerSequence <trait_integersequence>` or
+      :ref:`m3ta::ParameterPack <trait_parameterpack>` resulting of the
+      reversal.
 
 
 Aliases
 -------
 
-.. _alias_reverseintegersequencet:
+.. _alias_reverset:
 
-.. describe:: m3ta::ReverseIntegerSequenceT
+.. describe:: m3ta::ReverseT
    
    .. code-block:: cpp
       
       template<typename T_Sequence>
-      using ReverseIntegerSequenceT =
-          typename ReverseIntegerSequence<T_Sequence>::type;
+      using ReverseT = typename Reverse<T_Sequence>::type;
       
       
 .. _alias_reverseintegerpack:
@@ -58,7 +60,7 @@ Aliases
       
       template<typename T, T ... T_values>
       using ReverseIntegerPack =
-          ReverseIntegerSequence<IntegerSequence<T, T_values...>>;
+          Reverse<IntegerSequence<T, T_values...>>;
       
       
 .. _alias_reverseintegerpackt:
@@ -79,8 +81,7 @@ Aliases
    .. code-block:: cpp
       
       template<std::size_t ... T_values>
-      using ReverseIndexPack =
-          ReverseIntegerSequence<IndexSequence<T_values...>>;
+      using ReverseIndexPack = Reverse<IndexSequence<T_values...>>;
       
       
 .. _alias_reverseindexpackt:
@@ -90,20 +91,22 @@ Aliases
    .. code-block:: cpp
       
       template<std::size_t ... T_values>
-      using ReverseIndexPackT =
-          typename ReverseIndexPack<T_values...>::type;
+      using ReverseIndexPackT = typename ReverseIndexPack<T_values...>::type;
 
 
 Usage Examples
 --------------
 
-.. _usageexamples_reverseintegersequence:
+.. _usageexamples_reverse:
 
 .. code-block:: cpp
    
    using Type1 = m3ta::ReverseIndexPackT<
       0, 1, 2, 4
     >; // m3ta::IntegerSequence<std::size_t, 4, 2, 1, 0>
-   using Type2 = m3ta::ReverseIntegerSequenceT<
+   using Type2 = m3ta::ReverseT<
        m3ta::IntegerSequence<int, 0, 1, 2, 4>
    >; // m3ta::IntegerSequence<int, 4, 2, 1, 0>
+   using Type3 = m3ta::ReverseT<
+       m3ta::ParameterPack<int, float, double>
+   >; // m3ta::ParameterPack<double, float, int>

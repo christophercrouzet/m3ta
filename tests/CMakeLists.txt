@@ -129,7 +129,7 @@ create_test(
 )
 
 create_test(
-    test-m3ta-reverseintegersequence
-    NAME m3ta-reverseintegersequence
-    FILE m3ta/reverseintegersequence.cpp
+    test-m3ta-reverse
+    NAME m3ta-reverse
+    FILE m3ta/reverse.cpp
 )
