@@ -42,6 +42,7 @@ available as a convenience.
 .. toctree::
    :maxdepth: 1
    
+   m3ta/at
    m3ta/arithmeticoperationresult
    m3ta/concatenate
    m3ta/nestedinitializerlists

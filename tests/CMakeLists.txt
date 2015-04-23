@@ -15,6 +15,12 @@ create_test(
 )
 
 create_test(
+    test-m3ta-at
+    NAME m3ta-at
+    FILE m3ta/at.cpp
+)
+
+create_test(
     test-m3ta-arithmeticoperationresult
     NAME m3ta-arithmeticoperationresult
     FILE m3ta/arithmeticoperationresult.cpp
