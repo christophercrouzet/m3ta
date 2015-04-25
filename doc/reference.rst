@@ -50,6 +50,7 @@ available as a convenience.
    m3ta/nestedinitializerlists
    m3ta/pass
    m3ta/popback
+   m3ta/popfront
    m3ta/readonlyparameter
    m3ta/removequalifiers
    m3ta/reverse

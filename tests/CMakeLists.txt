@@ -117,6 +117,12 @@ create_test(
 )
 
 create_test(
+    test-m3ta-popfront
+    NAME m3ta-popfront
+    FILE m3ta/popfront.cpp
+)
+
+create_test(
     test-m3ta-power
     NAME m3ta-power
     FILE m3ta/power.cpp
