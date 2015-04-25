@@ -18,8 +18,7 @@ What’s Available?
 -----------------
 
 .. toctree::
-   :maxdepth: 2
-   :titlesonly:
+   :maxdepth: 3
    
    reference
 
