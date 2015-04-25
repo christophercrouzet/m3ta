@@ -27,6 +27,12 @@ create_test(
 )
 
 create_test(
+    test-m3ta-back
+    NAME m3ta-back
+    FILE m3ta/back.cpp
+)
+
+create_test(
     test-m3ta-concatenate
     NAME m3ta-concatenate
     FILE m3ta/concatenate.cpp
@@ -42,6 +48,12 @@ create_test(
     test-m3ta-endingoccurrences
     NAME m3ta-endingoccurrences
     FILE m3ta/endingoccurrences.cpp
+)
+
+create_test(
+    test-m3ta-front
+    NAME m3ta-front
+    FILE m3ta/front.cpp
 )
 
 create_test(

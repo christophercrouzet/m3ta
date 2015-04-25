@@ -44,7 +44,9 @@ available as a convenience.
    
    m3ta/at
    m3ta/arithmeticoperationresult
+   m3ta/back
    m3ta/concatenate
+   m3ta/front
    m3ta/nestedinitializerlists
    m3ta/pass
    m3ta/popback
